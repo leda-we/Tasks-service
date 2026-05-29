@@ -25,4 +25,8 @@ class Tasks(Sup):
     
     def __repr__(self):
         return f"<Task [{self.status}] {self.title} (Priority: {self.priority})>"
-    
+
+class User(Sup):
+    def __init__(self, username, role):
+        self.username = username
+        self.role = role

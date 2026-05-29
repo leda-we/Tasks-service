@@ -1,4 +1,4 @@
-from models import Tasks
+from models import Tasks, User
 
 try:
     task1 = Tasks("Сделать чё-то", priority=5)
@@ -6,6 +6,8 @@ try:
     print("ID задачи:", task1.id)
     task1.change("In progress")
     print("После обновления:", task1)
+    user = User("admin", "developer")
+    print( user.username, user.role)
 
     task1.change("ахахахахаха")
 except ValueError as e:
